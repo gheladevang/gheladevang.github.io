@@ -21,12 +21,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Vega-lite plots in Jekyll, Multiple ways">
-  <meta property="og:description" content="Ways to get vega-lite plots in our webpages.">
+  <meta property="og:title" content="Homework 10">
+  <meta property="og:description" content="Assignment 10, using Altair, Python, and Vega-lite">
   <meta property="og:image" content="assets/pngs/cars.png">
 
-  <title>Vega-lite plots in Jekyll, Multiple ways</title>
-  <meta name="description" content="Ways to get vega-lite plots in our webpages.">
+  <title>Homework 10</title>
+  <meta name="description" content="Assignment 10, using Altair, Python, and Vega-lite">
 
   <link rel="shortcut icon" type="image/x-icon" href="/assets/favicon.ico">
 
@@ -73,14 +73,18 @@
 
 </nav>
     <div class="col-lg-10 mx-auto mt-5 markdown-body">
-  <h1 id="example-vega-lite-specs-multiple-ways-to-include">Example Vega-lite Specs, Multiple Ways to Include</h1>
+  <h1 id="homework-10">Homework 10</h1>
 
-<vegachart schema-url="/assets/json/cars.json" style="width: 100%"></vegachart>
+<h2 id="plot-1-number-of-buildings-per-congressional-district">Plot 1: Number of Buildings per Congressional District</h2>
 
-<!-- these are written in a combo of html and liquid -->
+<p><br />
+For my first visualization, I plotted the number of buildings present in each congressional district as a stacked bar chart. I encoded the congress district variable as a quantitative variable, and for the number of buildings, I used a count aggregation on ‘Congress Dist’ and encoded that as a quantitative variable as well. I colored the bars based on the status of the buildings within the districts, status being a nominal variable. I didn’t change the color scheme as I felt the one it outputted was good enough. I felt that transformations were not necessary for the data as it seemed that there were no issues that might interfere with plotting it. I will note that I used the same data and chart I used for Homework 9, but plotting it using Altair, but the syntax was significantly easier for me to understand and write with as I’m more familiar with Python.
+<br /><br /></p>
+
+<vegachart schema-url="/assets/json/bar_buildings.json" style="width: 100%"></vegachart>
 
 <div class="left">
-<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/vega/vega/blob/main/docs/data/cars.json">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv">
   The Data
 </a>
 </div>
@@ -91,6 +95,29 @@
 </a>
 </div>
 
+<h2 id="plot-2-total-building-square-footage-per-agency">Plot 2: Total Building Square Footage per Agency</h2>
+
+<p><br />
+For the second plot I made, I plotted the total square footage of the buildings under each agency within the dataset. I encoded the agency name variable as a ordinal variable as it is all just strings of names that could be ordered by alphabetical order. For the total square footage, I used a sum aggregation on ‘Square Footage’ and encoded it as a quantitative variable. For this plot, I stuck to the default blue color for the bars as I did not have a variable from the set to color the bars by. Once again, there were no other transformations I made on the data besides the aggregation I mentioned before. As I also mentioned before, I used the same chart I made in Homework 9, but using Altair made it easier to code.
+<br /><br /></p>
+
+<vegachart schema-url="/assets/json/bar_buildings2.json" style="width: 100%"></vegachart>
+
+<div class="left">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://raw.githubusercontent.com/UIUC-iSchool-DataViz/is445_bcubcg_fall2022/main/data/building_inventory.csv">
+  The Data
+</a>
+</div>
+
+<div class="right">
+<a class="m-1 btn btn-outline-primary btn-2 " href="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb">
+  The Analysis
+</a>
+</div>
+
+<h3 id="interactivity">Interactivity</h3>
+
+<p>Something I noticed on my second plot was that there were bars that were too small to see what Total Square Footage they had, and other bars were too hard to estimate what that value was for them. To aid with this, I added a tooltip that shows the Agency Name and the Total Square Footage of buildings owned by the agency on the bar the user hovers over.</p>
 
 </div>
   </main>
