@@ -25,7 +25,7 @@ For my first visualization, I plotted the number of buildings present in each co
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/gheladevang/gheladevang.github.io/blob/main/python_notebooks/ghela-devang-assignment10.ipynb" text="The Analysis" %}
 </div>
 
 
@@ -42,9 +42,10 @@ For the second plot I made, I plotted the total square footage of the buildings 
 </div>
 
 <div class="right">
-{% include elements/button.html link="https://github.com/jnaiman/online_cv_public/blob/main/python_notebooks/test_generate_plots.ipynb" text="The Analysis" %}
+{% include elements/button.html link="https://github.com/gheladevang/gheladevang.github.io/blob/main/python_notebooks/ghela-devang-assignment10.ipynb" text="The Analysis" %}
 </div>
 
+<br /><br />
 ### Interactivity
 
 Something I noticed on my second plot was that there were bars that were too small to see what Total Square Footage they had, and other bars were too hard to estimate what that value was for them. To aid with this, I added a tooltip that shows the Agency Name and the Total Square Footage of buildings owned by the agency on the bar the user hovers over.
